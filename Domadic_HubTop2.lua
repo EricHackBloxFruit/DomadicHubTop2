@@ -3237,18 +3237,18 @@ local Misc = Library:AddTab("Misc","11156061121")
 local Time = H:AddLabel("Executor Time");spawn(function() getgenv().Time = true;while true do wait(.1) UpdateTime() end end);function UpdateTime() local date = os.date("*t");local hour = (date.hour) % 24;local ampm = hour < 12 and "AM" or "PM";local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);local LocalizationService = game:GetService("LocalizationService");local Players = game:GetService("Players");local player = Players.LocalPlayer;local name = player.Name;local result, code = pcall(function()   return LocalizationService:GetCountryRegionForPlayerAsync(player)  end);Time:Set(" : " .. timezone);Time:Set("Executor Time: " .. datetime .. " [ " .. code .. " ]");spawn(function() if getgenv().Time then pcall(function()  while wait() do  Time()  end end) end end) end
 
 H:AddLabel("Script PC/Mobile")
-H:AddLabel("Wellcone To Script Domadic Hub")
+H:AddLabel("Wellcone To Script Domadic Hub Top 2")
 
 H:AddSeperator("Credit")
 
 
 
-H:AddButton("Copy Link Donate",function()
-setclipboard("https://direct-link.net/547536/donate-domadic-hub")
+H:AddButton("Copy Link Discord",function()
+setclipboard("https://discord.gg/5WGaXYqs")
 end)
 
-H:AddButton("Copy Youtube Domadic Hub",function()
-setclipboard("https://youtube.com/@nomadicoof789")
+H:AddButton("Copy Link Discord 2",function()
+setclipboard("https://discord.gg/WNA5RwdD")
 end)
 
 H:AddLine()
