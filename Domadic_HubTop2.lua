@@ -8085,7 +8085,7 @@ M:AddToggle("Auto Find Full Moon",_G.AutoFindFullmoon,function(value)
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
                 Hop()
                 game.StarterGui:SetCore("SendNotification", {
-					Title = "Domadic Hub", 
+					Title = "Domadic Hub Top 2", 
 					Text = "Wait New Server" ,
 					Icon = "http://www.roblox.com/asset/?id=12523036534",
 					Duration = 2.5
@@ -8101,7 +8101,7 @@ M:AddToggle("Auto Find Full Moon",_G.AutoFindFullmoon,function(value)
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
                 Hop()
                 game.StarterGui:SetCore("SendNotification", {
-					Title = "Domadic Hub", 
+					Title = "Domadic Hub Top 2", 
 					Text = "Wait New Server" ,
 					Icon = "http://www.roblox.com/asset/?id=12523036534",
 					Duration = 2.5
@@ -15788,7 +15788,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
         originalstam = LocalPlayer.Character.Energy.Value
     end)
     
-    Misc:AddToggle("Auto Active Race",_G.AutoAgility,function(value)
+    Misc:AddToggle("Tự Động Bật Tộc V3",_G.AutoAgility,function(value)
         _G.AutoAgility = value
     end)
     
@@ -15802,7 +15802,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
         end)
     end)
     
-    Misc:AddToggle("Infinite Ability",true,function(value)
+    Misc:AddToggle("Vô Hạn Kĩ Năng",true,function(value)
         InfAbility = value
         if value == false then
             game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility"):Destroy()
@@ -15817,7 +15817,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
         end
     end)
     
-    Misc:AddToggle("Auto Use Awakening",_G.AutoAwakeningRace,function(value)
+    Misc:AddToggle("Tự Động Dùng Tộc V4",_G.AutoAwakeningRace,function(value)
     _G.AutoAwakeningRace = value
     end)
     
@@ -15833,7 +15833,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
     end
     end)
     
-    Misc:AddToggle("Infinite Obversation Range",getgenv().InfiniteObRange,function(value)
+    Misc:AddToggle("Vô Hạn Haki Quan Sát",getgenv().InfiniteObRange,function(value)
         getgenv().InfiniteObRange = value
         local VS = game:GetService("Players").LocalPlayer.VisionRadius.Value
         while getgenv().InfiniteObRange do
@@ -15852,7 +15852,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
         end
     end)
     
-    Misc:AddToggle("Infinite Geppo",getgenv().InfGeppo,function(value)
+    Misc:AddToggle("Vô Hạn Nhảy Trên Không",getgenv().InfGeppo,function(value)
         getgenv().InfGeppo = value
     end)
     
@@ -15878,7 +15878,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
         end
     end)
     
-    Misc:AddToggle("Infinite Soru",getgenv().InfSoru,function(value)
+    Misc:AddToggle("Vô Hạn Tốc Biến",getgenv().InfSoru,function(value)
         getgenv().InfSoru = value
     end)
     
@@ -15936,7 +15936,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
         end
     end)
     
-    Misc:AddButton("Remove Lave",function()
+    Misc:AddButton("Xóa Lava",function()
 		for i,v in pairs(game.Workspace:GetDescendants()) do
 			if v.Name == "Lava" then   
 				v:Destroy()
