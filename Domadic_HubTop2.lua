@@ -3440,60 +3440,60 @@ H:AddSeperator("Status")
         end
     end)
 
-H:AddSeperator(" Sword ")
+H:AddSeperator(" Kiếm ")
 
-local Saber = H:AddLabel("❌: Saber")
-local Rengoku = H:AddLabel("❌: Rengoku")
-local Midnight_Blade = H:AddLabel("❌: Midnight Blade")
-local Dragon_Trident = H:AddLabel("❌: Dragon Trident")
-local Yama = H:AddLabel("❌: Yama")
-local Buddy_Sword = H:AddLabel("❌: Buddy Sword")
-local Canvander = H:AddLabel("❌: Canvander")
+local Saber = H:AddLabel("❌: Kiếm Saber")
+local Rengoku = H:AddLabel("❌: Kiếm Rengoku")
+local Midnight_Blade = H:AddLabel("❌: Bán Dạ Kiếm")
+local Dragon_Trident = H:AddLabel("❌: Đinh Ba Rồng")
+local Yama = H:AddLabel("❌: Kiếm Yama")
+local Buddy_Sword = H:AddLabel("❌: Kiếm Buddy")
+local Canvander = H:AddLabel("❌: Kiếm Cavander")
 local Twin_Hooks = H:AddLabel("❌: Twin Hooks")
-local Spikey_Trident = H:AddLabel("❌: Spikey Trident")
-local Hallow_Scythe = H:AddLabel("❌: Hallow Scythe")
-local Dark_Dagger = H:AddLabel("❌: Dark Dagger")
-local Tushita = H:AddLabel("❌: Tushita")
+local Spikey_Trident = H:AddLabel("❌: Đinh Ba Gai")
+local Hallow_Scythe = H:AddLabel("❌: Lưỡi Hái Bóng Tối")
+local Dark_Dagger = H:AddLabel("❌: Dao Găm Bóng Tối")
+local Tushita = H:AddLabel("❌: Kiếm Tushita")
 
 spawn(function()
     while task.wait() do
         pcall(function()
             for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")) do
                 if v.Name == "Saber" then
-                    Saber:Set("✅: Saber")
+                    Saber:Set("✅: Kiếm Saber")
                 end
                 if v.Name == "Rengoku" then
-                    Rengoku:Set("✅: Rengoku")
+                    Rengoku:Set("✅: Kiếm Rengoku")
                 end
                 if v.Name == "Midnight Blade" then
-                    Midnight_Blade:Set("✅: Midnight Blade")
-                end
+                    Midnight_Blade:Set("✅: Bán Dạ Kiếm")
+		end					
                 if v.Name == "Dragon Trident" then
                     Dragon_Trident:Set("✅: Dragon Trident")
                 end
                 if v.Name == "Yama" then
-                    Yama:Set("✅: Yama")
+                    Yama:Set("✅: Kiếm Yama")
                 end
                 if v.Name == "Buddy Sword" then
-                    Buddy_Sword:Set("✅: Buddy Sword")
+                    Buddy_Sword:Set("✅: Kiếm Buddy")
                 end
                 if v.Name == "Canvander" then
-                    Canvander:Set("✅: Canvander")
+                    Canvander:Set("✅: Kiếm Cavander")
                 end
                 if v.Name == "Twin Hooks" then
                     Twin_Hooks:Set("✅: Twin Hooks")
                 end
                 if v.Name == "Spikey Trident" then
-                    Spikey_Trident:Set("✅: Spikey Trident")
+                    Spikey_Trident:Set("✅: Đinh Ba Gai")
                 end
                 if v.Name == "Hallow Scythe" then
-                    Hallow_Scythe:Set("✅: Hallow Scythe")
+                    Hallow_Scythe:Set("✅: Lưỡi Hái Bóng Tối")
                 end
                 if v.Name == "Dark Dagger" then
-                    Dark_Dagger:Set("✅: Dark Dagger")
+                    Dark_Dagger:Set("✅: Dao Găm Bóng Tối")
                 end
                 if v.Name == "Tushita" then
-                    Tushita:Set("✅: Tushita")
+                    Tushita:Set("✅: Kiếm Tushita")
                  end
             end
         end)
@@ -9169,9 +9169,9 @@ end)
     pcall(function()
         while wait() do
             if game.Workspace._WorldOrigin.Locations:FindFirstChild('Frozen Dimension') then
-                FrozenIsland:Set('🟢: Frozen Dimension Spawning')
+                FrozenIsland:Set('🟢: Frozen Dimension Đang Spawn')
             else
-                FrozenIsland:Set('🔴: Frozen Dimension Not Found')
+                FrozenIsland:Set('🔴: Frozen Dimension Chưa Spawn')
             end
         end
     end)
@@ -9180,12 +9180,12 @@ end)
 
 FrozenIsland = M:AddLabel("")
      
-    M:AddToggle("Auto Frozen Dimension",_G.AutoFrozenDimension,function(value)
+    M:AddToggle("Tự Động Dịch Chuyển Đến Frozen Dimension",_G.AutoFrozenDimension,function(value)
     _G.AutoFrozenDimension = value
     StopTween(_G.AutoFrozenDimension)
     end)
     
-    M:AddToggle("Auto Kitsunen Island",_G.AutoFKitsune,function(value)
+    M:AddToggle("Tự Động Dịch Chuyển Đến Đảo Kitsune",_G.AutoFKitsune,function(value)
     _G.AutoFKitsune = value
     StopTween(_G.AutoFKitsune)
     end)
@@ -9240,7 +9240,7 @@ FrozenIsland = M:AddLabel("")
 		end
 	end)
 	
-    M:AddToggle("Auto Elite Hunter",_G.AutoElitehunter,function(value)
+    M:AddToggle("Tự Động Đánh Elite",_G.AutoElitehunter,function(value)
         _G.AutoElitehunter = value
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
         StopTween(_G.AutoElitehunter)
