@@ -5285,12 +5285,12 @@ end)
     Main:AddSeperator("Setting")
     
     
-Main:AddToggle("By Pass Tp",BypassTP,function(Fast)
+Main:AddToggle("Bypass Dịch Chuyển",BypassTP,function(Fast)
 BypassTP = Fast
 end)
 
     
-Main:AddToggle("Bring Mob",true,function(Mag)
+Main:AddToggle("Gom Quái",true,function(Mag)
     _G.BringMonster = Mag
     end)
     spawn(function()
@@ -5326,9 +5326,9 @@ Main:AddToggle("Bring Mob",true,function(Mag)
         end
     end)
     
-local Bring = {"Low", "Normal", "Super Bring"}
-_G.BringMode = "Normal"
-Main:AddDropdown("Bring Mob Mode", Bring,function(value)
+local Bring = {"Thấp", "Bình Thường", "Siêu Gom Quái"}
+_G.BringMode = "Bình Thường"
+Main:AddToggle("Chế Độ Gom Quái", Bring,function(value)
     _G.BringMode = value
 end)
 spawn(function()
@@ -5347,7 +5347,7 @@ spawn(function()
     end
 end)
     
-Main:AddToggle("Auto Haki",true,function(value)
+Main:AddToggle("Tự Động Bật Haki",true,function(value)
 _G.AUTOHAKI = value
 end)
 spawn(function()
@@ -5364,7 +5364,7 @@ spawn(function()
 end)
 
   
-    Main:AddToggle("Fast Attack",true,function(value)
+    Main:AddToggle("Đánh Nhanh",true,function(value)
         _G.FastAttack = value
     end)      
     
@@ -5520,11 +5520,11 @@ spawn(function()
 end)
 
     
-Main:AddToggle("Auto Click",false,function(value)
+Main:AddToggle("Tự Động Nhấp",false,function(value)
 _G.AutoClick = value
 end)
 
-Main:AddToggle("Disabled Notifications Text",false,function(NamfonGay)
+Main:AddToggle("Disabled Thông Báo ",false,function(NamfonGay)
 _G.Remove_trct = NamfonGay
 end)
 
@@ -5540,7 +5540,7 @@ end)
 
 
 
-Main:AddToggle("Remove Hit Sound And Level Up",false,function(Remo)
+Main:AddToggle("Xóa Tiếng Đánh Và Lên Level",false,function(Remo)
 _G.RemoveHit = Remo
 end)
 
@@ -5556,7 +5556,7 @@ spawn(function()
     end)
 end)
 
-Main:AddToggle("Disabled Damage",false,function(Remo)
+Main:AddToggle("Disabled Sát Thương",false,function(Remo)
 _G.KobenHeegeen = Remo
 end)
 
@@ -5571,7 +5571,7 @@ spawn(function()
 end)
 
 
-Main:AddToggle("Black Screen",false,function(Umm)
+Main:AddToggle("Màn Hình Đen (Giảm Lag)",false,function(Umm)
 _G.StartBlackScreen = Umm
 end)
 
@@ -5598,7 +5598,7 @@ end)
     end
 end) 
     
-        Main:AddToggle("White Screen",_G.WhiteScreen,function(value)
+        Main:AddToggle("Màn Hình Trắng (Giảm LAG)",_G.WhiteScreen,function(value)
     _G.WhiteScreen = value
 if _G.WhiteScreen == true then
     game:GetService("RunService"):Set3dRenderingEnabled(false)
@@ -5607,7 +5607,7 @@ elseif _G.WhiteScreen == false then
 end
 end)
 
-    Main:AddToggle("Invisible Monsters",_G.inv,function(value)
+    Main:AddToggle("Tàng Hình Quái Vật",_G.inv,function(value)
     _G.inv = value
     
          while wait() do
@@ -5681,7 +5681,7 @@ end)
     M:AddSeperator("World")
 
     if World1 then
-        M:AddToggle("Auto Second Sea",_G.AutoSecondSea,function(value)
+        M:AddToggle("Tự Động Qua Sea 2",_G.AutoSecondSea,function(value)
             _G.AutoSecondSea = value
             StopTween(_G.AutoSecondSea)
         end)
@@ -5744,7 +5744,7 @@ end)
 
     if World2 then
 
-        M:AddToggle("Auto Third Sea",_G.AutoThirdSea,function(value)
+        M:AddToggle("Tự Động Qua Sea 3",_G.AutoThirdSea,function(value)
             _G.AutoThirdSea = value
             StopTween(_G.AutoThirdSea)
         end)
@@ -5794,7 +5794,7 @@ end)
     
     if World2 then
 
-        M:AddToggle("Auto Farm Factory",_G.AutoFactory,function(value)
+        M:AddToggle("Tự Động Cày Nhà Máy",_G.AutoFactory,function(value)
             _G.AutoFactory = value
             StopTween(_G.AutoFactory)
         end)
@@ -5827,14 +5827,14 @@ end)
         pcall(function()
             while wait() do
     if game.Workspace._WorldOrigin.Locations:FindFirstChild('Mirage Island') then
-    Mirragecheck:Set('🏝️: Mirage Island is Spawning')
+    Mirragecheck:Set('🏝️: Đảo Kì Bí Đang Spawn')
     else
-      Mirragecheck:Set('❌: Mirage Island Not Found ' )end
+      Mirragecheck:Set('❌: Đảo Kì Bí Chưa Spawn ' )end
             end
         end)
 end)
 Mirragecheck = M:AddLabel("")
-M:AddToggle("Auto Mystic Island",_G.AutoMysticIsland,function(value)
+M:AddToggle("Tự Động Đến Đảo Kì Bí",_G.AutoMysticIsland,function(value)
         _G.AutoMysticIsland = value
         StopTween(_G.AutoMysticIsland)
         end)
@@ -5850,7 +5850,7 @@ M:AddToggle("Auto Mystic Island",_G.AutoMysticIsland,function(value)
                 end
             end)
         end)
-    M:AddToggle("Auto Drive",AutoW,function(W)
+    M:AddToggle("Tự Động Lái",AutoW,function(W)
     AutoW = W
     end)
     spawn(function()
@@ -5869,7 +5869,7 @@ M:AddToggle("Auto Mystic Island",_G.AutoMysticIsland,function(value)
 		end)
     end
     end)
-    M:AddToggle("Auto Summon Mirage Island",_G.dao,function(state)
+    M:AddToggle("Tự Động Triệu Hồi Đảo Kì Bí",_G.dao,function(state)
     if state then
         _G.dao = true
     else
@@ -5930,7 +5930,7 @@ for _,v in next, workspace.Boats.PirateBrigade:GetDescendants() do
 end
 end
 end) 
-M:AddToggle("Teleport Advanced Fruit Dealer",_G.TPNPC,function(value)
+M:AddToggle("Dịch Chuyển Đến Người Bán Fruit Nâng Cao",_G.TPNPC,function(value)
              _G.Miragenpc = value
              StopTween(_G.Miragenpc)
         end)
@@ -5946,7 +5946,7 @@ spawn(function()
         end
     end)
 end)
-M:AddButton("Teleport Advanced Fruit Dealer", function()
+M:AddButton("Dịch Chuyển Đến Người Bán Fruit Nâng Cao", function()
                 TweenNpc()
                 end)
 
@@ -5966,7 +5966,7 @@ M:AddButton("Teleport Advanced Fruit Dealer", function()
                             end
                         end
                     end
-M:AddToggle("Tween Gear",_G.TweenMGear,function(value)
+M:AddToggle("Dịch Chuyển Đến Bánh Răng",_G.TweenMGear,function(value)
 _G.TweenMGear = value
 StopTween(_G.TweenMGear)
 end)
@@ -5994,7 +5994,7 @@ end
 
     M:AddSeperator("Fighting Style")
     
-    M:AddToggle("Auto Superhuman",_G.AutoSuperhuman,function(value)
+    M:AddToggle("Tự Động Lấy Superhuman",_G.AutoSuperhuman,function(value)
         _G.AutoSuperhuman = value
     end)
     
@@ -6071,7 +6071,7 @@ end
         end)
     end)
     
-    M:AddToggle("Auto DeathStep",_G.AutoDeathStep,function(value)
+    M:AddToggle("Tự Động Lấy Death Step",_G.AutoDeathStep,function(value)
         _G.AutoDeathStep = value
     end)
     
@@ -6097,7 +6097,7 @@ end
         end
     end)
     
-    M:AddToggle("Auto Sharkman Karate",_G.AutoSharkman,function(value)
+    M:AddToggle("Tự Động Lấy Sharkman Karate",_G.AutoSharkman,function(value)
         _G.AutoSharkman = value
     end)
     
@@ -6145,7 +6145,7 @@ end
         end)
     end)
     
-    M:AddToggle("Auto Electric Claw",_G.AutoElectricClaw,function(value)
+    M:AddToggle("Tự Động Lấy Electric Claw",_G.AutoElectricClaw,function(value)
         _G.AutoElectricClaw = value
         StopTween(_G.AutoElectricClaw)
     end)
@@ -6216,7 +6216,7 @@ end
         end)
     end)
     
-    M:AddToggle("Auto Dragon Talon",_G.AutoDragonTalon,function(value)
+    M:AddToggle("Tự Động Lấy Dragon Talon",_G.AutoDragonTalon,function(value)
         _G.AutoDragonTalon = value
     end)
     
@@ -6242,7 +6242,7 @@ end
         end
     end)
     
-    M:AddToggle("Auto GodHuman",_G.Auto_God_Human,function(value)
+    M:AddToggle("Tự Động Lấy Godhuman",_G.Auto_God_Human,function(value)
  _G.Auto_God_Human = value
 end)
 spawn(function()
@@ -6330,7 +6330,7 @@ end)
 M:AddSeperator(" Materials ")
 
 if World2 then
-M:AddToggle("Auto Farm Radioactive Material",false,function(value)
+M:AddToggle("Tự Động Cày Radioactive Material",false,function(value)
 Radioactive = value
 StopTween(Radioactive)
 end)
@@ -6387,7 +6387,7 @@ local MaterialsPos1 = CFrame.new(-507.7895202636719, 72.99479675292969, -126.456
 end
   
 if World2 then  
-M:AddToggle("Auto Farm Mystic Droplet",false,function(value)
+M:AddToggle("Tự Động Cày Mystic Droplet",false,function(value)
 _G.Makori_gay = value
 StopTween(_G.Makori_gay)
 end)
@@ -6444,7 +6444,7 @@ spawn(function()
 end
     
 if World1 or World2 then
-M:AddToggle("Auto Farm Magma Ore",_G.Makori_gay,function(value)
+M:AddToggle("Tự Động Cày Quặng Dung Nham",_G.Makori_gay,function(value)
 _G.Umm = value
 StopTween(_G.Umm)
 end)
@@ -6551,7 +6551,7 @@ spawn(function()
 end
     
 if World1 then  
-M:AddToggle("Auto Farm Angel Wings",_G.Makori_gay,function(value)
+M:AddToggle("Tự Động Cày Cánh Thiên Thần",_G.Makori_gay,function(value)
 _G.Auto_Wing = value
 StopTween(_G.Auto_Wing)
 end)
@@ -6608,7 +6608,7 @@ spawn(function()
 end
 
 if World1 or World2 or World3 then   
-M:AddToggle("Auto Farm Leather",_G.Makori_gay,function(value)
+M:AddTogglend("Tự Động Cày Leather",_G.Makori_gay,function(value)
 _G.Leather = value
 StopTween(_G.Leather)
 end)
@@ -6765,7 +6765,7 @@ spawn(function()
  end
   
 if World1 or world2 or World3 then    
-M:AddToggle("Auto Farm Scrap Metal",false,function(value)
+M:AddToggle("Tự Động Cày Scrap Metal",false,function(value)
 Scrap = value
 StopTween(Scrap)
 end)
@@ -6922,7 +6922,7 @@ spawn(function()
 end
     
 if World3 then  
-M:AddToggle("Auto Farm Conjured Cocoa",false,function(value)
+M:AddToggle("Tự Động Cày Conjured Cocoa",false,function(value)
 Cocoafarm = value
 StopTween(Cocoafarm)
 end)
@@ -6979,7 +6979,7 @@ spawn(function()
 end
  
 if World3 then     
-M:AddToggle("Auto Farm Dragon Scale",false,function(value)
+M:AddToggle("Tự Động Cày Vảy Rồng",false,function(value)
 Dragon_Scale = value
 StopTween(Dragon_Scale)
 end)
@@ -7036,7 +7036,7 @@ spawn(function()
 end
   
 if World3 then    
-M:AddToggle("Auto Farm Gunpowder",false,function(value)
+M:AddToggle("Tự Động Cày Thuốc Súng",false,function(value)
 Gunpowder = value
 StopTween(Gunpowder)
 end)
@@ -7093,7 +7093,7 @@ spawn(function()
 end
  
 if World3 then     
-M:AddToggle("Auto Farm Fish Tail World 3",false,function(value)
+M:AddToggle("Tự Động Cày Đuôi Cá(Sea 3)",false,function(value)
 Fish = value
 StopTween(Fish)
 end)
@@ -7150,7 +7150,7 @@ spawn(function()
 end
     
 if World3 then  
-M:AddToggle("Auto Farm Mini Tusk",false,function(value)
+M:AddToggle("Tự Động Cày Mini Tusk",false,function(value)
 MiniHee = value
 StopTween(MiniHee)
 end)
@@ -7210,9 +7210,9 @@ end
     _G.StardHop = value
     end)
 
-    M:AddSeperator("Advance Dungeon")
+    M:AddSeperator("Raid Nâng Cao")
     
-    M:AddToggle("Auto Phoenix Raid",_G.AutoAdvanceDungeon,function(value)
+    M:AddToggle("Tự Động Raid Phoenix",_G.AutoAdvanceDungeon,function(value)
         _G.AutoAdvanceDungeon = value
         StopTween(_G.AutoAdvanceDungeon)
     end)
@@ -7249,7 +7249,7 @@ end
 
    M:AddSeperator("Misc Mastery")
     
-    M:AddToggle("Auto Farm BF Mastery",_G.AutoFarmFruitMastery,function(value)
+    M:RemoteEvent("Tự Động Cày Thông Thạo BF",_G.AutoFarmFruitMastery,function(value)
         _G.AutoFarmFruitMastery = value
         StopTween(_G.AutoFarmFruitMastery)
         if _G.AutoFarmFruitMastery == false then
@@ -7672,7 +7672,7 @@ end
         end)
     end)
     
-    M:AddToggle("Auto Farm Gun Mastery",_G.AutoFarmGunMastery,function(value)
+    M:AddToggle("Tự Động Cày Thông Thạo Súng",_G.AutoFarmGunMastery,function(value)
         _G.AutoFarmGunMastery = value
         StopTween(_G.AutoFarmGunMastery)
     end)
@@ -7769,7 +7769,7 @@ function EquipWeaponSword()
 	end)
 end
 
-    M:AddToggle("Auto Farm Sword Mastery",_G.AutoSwordMastery,function(value)
+    M:AddToggle("Tự Động Cày Thông Thạo Kiếm",_G.AutoSwordMastery,function(value)
         _G.AutoSwordMastery = value
         StopTween(_G.AutoSwordMastery)
     end)
@@ -7857,12 +7857,12 @@ end
     
     M:AddSeperator("Misc Buddy Sword")
     
-    M:AddToggle("Auto Buddy Sword",_G.AutoBudySword,function(value)
+    M:AddToggle("Tự Động Lấy Kiếm Buddy",_G.AutoBudySword,function(value)
         _G.AutoBudySword = value
         StopTween(_G.AutoBudySword)
     end)
     
-    M:AddToggle("Auto Buddy Sword Hop",_G.AutoBudySwordHop,function(value)
+    M:AddToggle("Tự Động Lấy Kiếm Buddy + Hop",_G.AutoBudySwordHop,function(value)
         _G.AutoBudySwordHop = value
     end)
     
@@ -7922,23 +7922,23 @@ end
             while task.wait() do
                 pcall(function()
                     if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
-                        FM:Set("🌕: Full Moon 100%")
+                        FM:Set("🌕: 100% Trăng Tròn")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" then
-                        FM:Set("🌖’ : Full Moon 75%")
+                        FM:Set("🌖’ : 75% Trăng Tròn")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
-                        FM:Set("🌗“ : Full Moon 50%")
+                        FM:Set("🌗“ : 50% Trăng Tròn")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
-                        FM:Set("🌘 : Full Moon 25%")
+                        FM:Set("🌘 : 25% Trăng Tròn")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
-                        FM:Set("🌘: Full Moon 15%")
+                        FM:Set("🌘: 15% Trăng Tròn")
                     else
-                        FM:Set("Wait For Moon")
+                        FM:Set("Chờ Trăng Tròn")
                     end
                 end)
             end
     end)
     
-    M:AddToggle("Auto Soul Guitar",_G.AutoNevaSoulGuitar,function(value)
+    M:AddToggle("Tự Động Lấy Soul Guitar",_G.AutoNevaSoulGuitar,function(value)
   _G.AutoNevaSoulGuitar = value    
  StopTween(_G.AutoNevaSoulGuitar)
  end)
@@ -8063,11 +8063,11 @@ end
 		end
 end)
 
-M:AddToggle("Auto Soul Guitar + Hop",false,function(value)
+M:AddToggle("Tự Động Lấy Soul Guitar + Hop",false,function(value)
   _G.soulGuitarhop = value    
  end)
 
-M:AddToggle("Auto Find Full Moon",_G.AutoFindFullmoon,function(value)
+M:AddToggle("Tự Động Tìm Trăng Tròn",_G.AutoFindFullmoon,function(value)
   _G.AutoFindFullmoon = value    
  end)
  
@@ -8077,7 +8077,7 @@ M:AddToggle("Auto Find Full Moon",_G.AutoFindFullmoon,function(value)
             if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" or game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
                 wait(2.0)
                 game.StarterGui:SetCore("SendNotification", {
-					Title = "Domadic Hab", 
+					Title = "Domadic Hub Top 2", 
 					Text = "Full Moon" ,
 					Icon = "http://www.roblox.com/asset/?id=12523036534",
 					Duration = 2.5
@@ -8093,7 +8093,7 @@ M:AddToggle("Auto Find Full Moon",_G.AutoFindFullmoon,function(value)
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
                 Hop()
                 game.StarterGui:SetCore("SendNotification", {
-					Title = "Domadic Hub", 
+					Title = "Domadic Hub Top 2", 
 					Text = "Wait New Server" ,
 					Icon = "http://www.roblox.com/asset/?id=12523036534",
 					Duration = 2.5
