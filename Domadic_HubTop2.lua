@@ -15904,7 +15904,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
         end
     end)
     
-    Misc:AddToggle("Walk on Water",true,function(value)
+    Misc:AddToggle("Đi Trên Nước",true,function(value)
         _G.WalkWater = value
     end)
     
@@ -15964,7 +15964,7 @@ spawn(function()
     end)
     end)
 
-print("Domadic Hub Load Complete")
+print("Domadic Hub Top 2 Load Complete")
 
 game.StarterGui:SetCore("SendNotification", {
       Icon = "http://www.roblox.com/asset/?id=12523036534";
