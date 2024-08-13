@@ -15708,12 +15708,12 @@ Misc:AddSeperator("ESP MENU")
         end
     end)
     
-    Misc:AddToggle("ESP Real Fruit",RealFruitESP,function(a)
+    Misc:AddToggle("ESP Trái Cây Thật",RealFruitESP,function(a)
         RealFruitESP = a
 	UpdateRealFruitChams() 
     end)
     
-    Misc:AddToggle("ESP Flower",false,function(a)
+    Misc:AddToggle("ESP Hoa (Up Tộc V2)",false,function(a)
         FlowerESP = a
 	UpdateFlowerChams() 
     end)
@@ -15736,7 +15736,7 @@ Misc:AddSeperator("ESP MENU")
 		    end
 	    end
     end)
-Misc:AddToggle("ESP Island",IslandESP,function(value)
+Misc:AddToggle("ESP Đảo",IslandESP,function(value)
         IslandESP = value
         while IslandESP do wait()
             UpdateIslandESP() 
@@ -15746,30 +15746,30 @@ Misc:AddToggle("ESP Island",IslandESP,function(value)
     NpcESP = nec
 end)
 
-Misc:AddToggle("Esp Sea Beast", false, function(nec)
+Misc:AddToggle("Esp Thủy Quái", false, function(nec)
     SeaESP = nec
 end)
 
 
-Misc:AddToggle("Esp Mob", false, function(nec)
+Misc:AddToggle("Esp Quái", false, function(nec)
     MobESP = nec
 end)
 
-Misc:AddToggle("Esp Mystic Island", false, function(value)
+Misc:AddToggle("Esp Đảo Kì Bí", false, function(value)
     MirageIslandESP = value
         while MirageIslandESP do wait()
             UpdateIslandMirageESP()
         end
     end)
 
-Misc:AddToggle("Esp Advanced Fruit Dealer", false, function(value)
+Misc:AddToggle("Esp Người Bán Fruit Cao Cấp", false, function(value)
     AfdESP = value
         while AfdESP do wait()
             UpdateAfdESP()
         end
     end)
     
-Misc:AddToggle("Esp Gear [Beta]", false, function(value)
+Misc:AddToggle("Esp Bánh Răng [Beta]", false, function(value)
     GearESP = value
         while GearESP do wait()
             UpdateGeaESP() 
@@ -15783,7 +15783,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
         NoDodgeCool()
     end)
     
-    Misc:AddToggle("Infinite Energy",false,function(value)
+    Misc:AddToggle("Vô Hạn Năng Lượng",false,function(value)
         InfiniteEnergy = value
         originalstam = LocalPlayer.Character.Energy.Value
     end)
