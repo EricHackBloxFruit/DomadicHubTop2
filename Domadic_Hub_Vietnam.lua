@@ -15817,7 +15817,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
         end
     end)
     
-    Misc:AddToggle("Auto Use Awakening",_G.AutoAwakeningRace,function(value)
+    Misc:AddToggle("Tự Động Dùng Thức Tỉnh",_G.AutoAwakeningRace,function(value)
     _G.AutoAwakeningRace = value
     end)
     
@@ -15979,18 +15979,3 @@ game.StarterGui:SetCore("SendNotification", {
 })
 local ChatService = game:GetService("Chat")
 
--- Hàm để gửi tin nhắn đến tất cả người chơi
-local function sendSystemMessage(message)
-    ChatService:Chat(game.Workspace, message, Enum.ChatColor.Blue)
-end
-
--- Gửi tin nhắn khi server khởi động
-sendSystemMessage("Chào mừng đến script Domadic Hub VN!")
-
--- Gửi tin nhắn mỗi 5 phút
-while true do
-    wait(300) -- Chờ 5 phút
-    sendSystemMessage("Cảm ơn đã dùng script nha!")
-end
-
-   
