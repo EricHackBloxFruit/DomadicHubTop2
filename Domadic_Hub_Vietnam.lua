@@ -7857,12 +7857,12 @@ end
     
     M:AddSeperator("Misc Buddy Sword")
     
-    M:AddToggle("Auto Buddy Sword",_G.AutoBudySword,function(value)
+    M:AddToggle("Tự Động Lấy Kiếm Buddy",_G.AutoBudySword,function(value)
         _G.AutoBudySword = value
         StopTween(_G.AutoBudySword)
     end)
     
-    M:AddToggle("Auto Buddy Sword Hop",_G.AutoBudySwordHop,function(value)
+    M:AddToggle("Tự Động Lấy Kiếm Buddy + Hop",_G.AutoBudySwordHop,function(value)
         _G.AutoBudySwordHop = value
     end)
     
@@ -7922,23 +7922,23 @@ end
             while task.wait() do
                 pcall(function()
                     if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
-                        FM:Set("🌕: Full Moon 100%")
+                        FM:Set("🌕: Đang Trăng Tròn (100%)")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" then
-                        FM:Set("🌖’ : Full Moon 75%")
+                        FM:Set("🌖’ : 75% Trăng Tròn")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
-                        FM:Set("🌗“ : Full Moon 50%")
+                        FM:Set("🌗“ : 50% Trăng Tròn")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
-                        FM:Set("🌘 : Full Moon 25%")
+                        FM:Set("🌘 : 25% Trăng Tròn")
                     elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
-                        FM:Set("🌘: Full Moon 15%")
+                        FM:Set("🌘: 15% Trăng Tròn")
                     else
-                        FM:Set("Wait For Moon")
+                        FM:Set("Chờ Trăng Tròn")
                     end
                 end)
             end
     end)
     
-    M:AddToggle("Auto Soul Guitar",_G.AutoNevaSoulGuitar,function(value)
+    M:AddToggle("Tự Động Lấy Guitar Linh Hồn",_G.AutoNevaSoulGuitar,function(value)
   _G.AutoNevaSoulGuitar = value    
  StopTween(_G.AutoNevaSoulGuitar)
  end)
@@ -8063,11 +8063,11 @@ end
 		end
 end)
 
-M:AddToggle("Auto Soul Guitar + Hop",false,function(value)
+M:AddToggle("Tự Động Lấy Guitar Linh Hồn + Hop",false,function(value)
   _G.soulGuitarhop = value    
  end)
 
-M:AddToggle("Auto Find Full Moon",_G.AutoFindFullmoon,function(value)
+M:AddToggle("Tự Động Tìm Trăng Tròn",_G.AutoFindFullmoon,function(value)
   _G.AutoFindFullmoon = value    
  end)
  
@@ -8077,15 +8077,15 @@ M:AddToggle("Auto Find Full Moon",_G.AutoFindFullmoon,function(value)
             if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" or game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
                 wait(2.0)
                 game.StarterGui:SetCore("SendNotification", {
-					Title = "Domadic Hab", 
-					Text = "Full Moon" ,
+					Title = "Domadic Hub VN", 
+					Text = "Đang Full Moon" ,
 					Icon = "http://www.roblox.com/asset/?id=12523036534",
 					Duration = 2.5
 				})
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
                 Hop()
                 game.StarterGui:SetCore("SendNotification", {
-					Title = "Domadic Hub", 
+					Title = "Domadic Hub VN", 
 					Text = "Wait New Server" ,
 					Icon = "http://www.roblox.com/asset/?id=12523036534",
 					Duration = 2.5
@@ -8093,7 +8093,7 @@ M:AddToggle("Auto Find Full Moon",_G.AutoFindFullmoon,function(value)
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
                 Hop()
                 game.StarterGui:SetCore("SendNotification", {
-					Title = "Domadic Hub", 
+					Title = "Domadic Hub VN", 
 					Text = "Wait New Server" ,
 					Icon = "http://www.roblox.com/asset/?id=12523036534",
 					Duration = 2.5
@@ -8101,7 +8101,7 @@ M:AddToggle("Auto Find Full Moon",_G.AutoFindFullmoon,function(value)
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
                 Hop()
                 game.StarterGui:SetCore("SendNotification", {
-					Title = "Domadic Hub", 
+					Title = "Domadic Hub VN", 
 					Text = "Wait New Server" ,
 					Icon = "http://www.roblox.com/asset/?id=12523036534",
 					Duration = 2.5
@@ -8113,9 +8113,9 @@ M:AddToggle("Auto Find Full Moon",_G.AutoFindFullmoon,function(value)
         end
     end)
     
- M:AddSeperator("Dual Curse Katana")
+ M:AddSeperator("Song Kiếm Nguyền Rủa")
 
-M:AddToggle("Auto Dual Curse Katana",_G.AutoCdk,function(value)
+M:AddToggle("Tự Động Lấy Song Kiếm",_G.AutoCdk,function(value)
  Auto_Cursed_Dual_Katana = value
 StopTween(Auto_Cursed_Dual_Katana)
 end)
@@ -15833,7 +15833,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
     end
     end)
     
-    Misc:AddToggle("Infinite Obversation Range",getgenv().InfiniteObRange,function(value)
+    Misc:AddToggle("Vô Hạn Haki Quan Sát",getgenv().InfiniteObRange,function(value)
         getgenv().InfiniteObRange = value
         local VS = game:GetService("Players").LocalPlayer.VisionRadius.Value
         while getgenv().InfiniteObRange do
@@ -15852,7 +15852,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
         end
     end)
     
-    Misc:AddToggle("Infinite Geppo",getgenv().InfGeppo,function(value)
+    Misc:AddToggle("Vô Hạn Nhảy Trên Không",getgenv().InfGeppo,function(value)
         getgenv().InfGeppo = value
     end)
     
@@ -15878,7 +15878,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
         end
     end)
     
-    Misc:AddToggle("Infinite Soru",getgenv().InfSoru,function(value)
+    Misc:AddToggle("Vô Hạn Tốc Biến",getgenv().InfSoru,function(value)
         getgenv().InfSoru = value
     end)
     
@@ -15904,7 +15904,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
         end
     end)
     
-    Misc:AddToggle("Walk on Water",true,function(value)
+    Misc:AddToggle("Đi Trên Nước",true,function(value)
         _G.WalkWater = value
     end)
     
@@ -15936,7 +15936,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
         end
     end)
     
-    Misc:AddButton("Remove Lave",function()
+    Misc:AddButton("Xóa Dung Nham",function()
 		for i,v in pairs(game.Workspace:GetDescendants()) do
 			if v.Name == "Lava" then   
 				v:Destroy()
@@ -15968,14 +15968,29 @@ print("Domadic Hub Load Complete")
 
 game.StarterGui:SetCore("SendNotification", {
       Icon = "http://www.roblox.com/asset/?id=12523036534";
-      Title = "Domadic Hub", 
-      Text = "Welcome To Script!!";
+      Title = "Domadic Hub VN", 
+      Text = "Chào mừng đến Script!";
 })
 wait(3)
 game.StarterGui:SetCore("SendNotification", {
       Icon = "http://www.roblox.com/asset/?id=12523036534";
-      Title = "Domadic Hub", 
-      Text = "made by @miidraayeerng อยาก Yed Owner Zps วะ";
+      Title = "Domadic Hub VN", 
+      Text = "Tạo Bởi Eric được Vietsub";
 })
+local ChatService = game:GetService("Chat")
+
+-- Hàm để gửi tin nhắn đến tất cả người chơi
+local function sendSystemMessage(message)
+    ChatService:Chat(game.Workspace, message, Enum.ChatColor.Blue)
+end
+
+-- Gửi tin nhắn khi server khởi động
+sendSystemMessage("Chào mừng đến script Domadic Hub VN!")
+
+-- Gửi tin nhắn mỗi 5 phút
+while true do
+    wait(300) -- Chờ 5 phút
+    sendSystemMessage("Cảm ơn đã dùng script nha!")
+end
 
    
