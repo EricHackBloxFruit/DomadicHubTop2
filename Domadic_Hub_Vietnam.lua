@@ -15788,7 +15788,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
         originalstam = LocalPlayer.Character.Energy.Value
     end)
     
-    Misc:AddToggle("Auto Active Race",_G.AutoAgility,function(value)
+    Misc:AddToggle("Tự Động Bật V3",_G.AutoAgility,function(value)
         _G.AutoAgility = value
     end)
     
@@ -15802,7 +15802,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
         end)
     end)
     
-    Misc:AddToggle("Infinite Ability",true,function(value)
+    Misc:AddToggle("Vô Hạn Kĩ Năng",true,function(value)
         InfAbility = value
         if value == false then
             game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility"):Destroy()
@@ -15817,7 +15817,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
         end
     end)
     
-    Misc:AddToggle("Tự Động Dùng Thức Tỉnh",_G.AutoAwakeningRace,function(value)
+    Misc:AddToggle("Tự Động Dùng Tộc V4",_G.AutoAwakeningRace,function(value)
     _G.AutoAwakeningRace = value
     end)
     
@@ -15920,7 +15920,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
 			end
 		end)
     
-    Misc:AddToggle("NoClip",_G.NOCLIP,function(value)
+    Misc:AddToggle("Đi Xuyên Tường",_G.NOCLIP,function(value)
         _G.NOCLIP = value
     end)
 	
