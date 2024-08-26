@@ -15783,7 +15783,7 @@ Misc:AddToggle("Esp Gear [Beta]", false, function(value)
         NoDodgeCool()
     end)
     
-    Misc:AddToggle("Infinite Energy",false,function(value)
+    Misc:AddToggle("Vô Hạn Năng Lượng",false,function(value)
         InfiniteEnergy = value
         originalstam = LocalPlayer.Character.Energy.Value
     end)
