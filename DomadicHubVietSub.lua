@@ -28,7 +28,7 @@ ImageButton1.BorderSizePixel = 0
 ImageButton1.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 ImageButton1.Size = UDim2.new(0, 50, 0, 50)
 ImageButton1.Draggable = true
-ImageButton1.Image = "http://www.roblox.com/asset/?id=12523036534"
+ImageButton1.Image = "http://www.roblox.com/asset/?id=106898136342049"
 ImageButton1.MouseButton1Down:connect(function()
   game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
   game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
@@ -532,7 +532,7 @@ local LogoToggle = Instance.new("ImageLabel")
     LogoToggle.BackgroundTransparency = 1.000
     LogoToggle.Position = UDim2.new(0, 7, 0, 2)
     LogoToggle.Size = UDim2.new(0, 26, 0, 26)
-    LogoToggle.Image = "http://www.roblox.com/asset/?id="..tostring(12523036534)
+    LogoToggle.Image = "http://www.roblox.com/asset/?id="..tostring(106898136342049)
 
             Circle.Name = "Circle"
             Circle.Parent = ToggleImage
@@ -15967,14 +15967,14 @@ spawn(function()
 print("Domadic Hub Load Complete")
 
 game.StarterGui:SetCore("SendNotification", {
-      Icon = "http://www.roblox.com/asset/?id=12523036534";
-      Title = "Domadic Hub VN", 
+      Icon = "http://www.roblox.com/asset/?id=106898136342049";
+      Title = "Eric Hub VN", 
       Text = "Chào mừng đến Script!";
 })
 wait(3)
 game.StarterGui:SetCore("SendNotification", {
-      Icon = "http://www.roblox.com/asset/?id=12523036534";
-      Title = "Domadic Hub VN", 
+      Icon = "http://www.roblox.com/asset/?id=106898136342049";
+      Title = "Eric Hub VN", 
       Text = "Tạo Bởi Eric được Vietsub";
 })
 local ChatService = game:GetService("Chat")
